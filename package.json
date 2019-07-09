@@ -1,0 +1,28 @@
+{
+  "name": "server-side-nodejs",
+  "version": "1.0.0",
+  "description": "server side nodejs learning",
+  "main": "index.js",
+  "scripts": {
+    "serve": "ts-node src/express.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/h-haraguchi/server-side-nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/h-haraguchi/server-side-nodejs/issues"
+  },
+  "homepage": "https://github.com/h-haraguchi/server-side-nodejs#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.0",
+    "@types/node": "^12.6.1",
+    "express": "^4.17.1",
+    "log4js": "^4.4.0",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.3"
+  },
+  "dependencies": {}
+}
