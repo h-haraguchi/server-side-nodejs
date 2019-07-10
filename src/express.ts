@@ -2,6 +2,9 @@ import express from 'express';
 import {logger} from './logger';
 import passport from 'passport';
 import {Strategy, VerifyFunction} from 'passport-local';
+import bodyParser from 'body-parser'
+import cookieParser from 'cookie-parser'
+import expressSession from 'express-session'
 
 const PORT = 3000;
 
@@ -15,9 +18,9 @@ passport.deserializeUser(function(id, cb) { cb(null, {}); });
 
 const app = express();
 
-app.use(require('cookie-parser')());
-app.use(require('body-parser').urlencoded({ extended: true }));
-app.use(require('express-session')({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
+app.use(cookieParser());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(expressSession({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
 
 app.use(passport.initialize());
 app.use(passport.session());
